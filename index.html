@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="./Images/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container mainContainer rounded-5 overflow-hidden my-4">
+        <h1 class="my-5 text-center">Bookmarker</h1>
+        <div class="contentForm">
+            <h2 class="px-3 py-3 text-center"> Bookmark your favorite sites </h2>
+            <div class="inputsSection">
+                <div class="siteName d-flex flex-column justify-content-center px-3">
+                    <label for="siteName" class="fw-bold"><i class="fa-solid fa-floppy-disk"></i> Site Name:</label>
+                    <input type="text" id="siteName" name="siteName" value="" placeholder="Please Enter Your Site Name"
+                        class="form-control mt-2">
+                    <p id="siteNameAlert" class="alert alert-danger p-1 mt-2 fs-6 d-none" role="alert">
+                        "The site name is Invalid, It must start with a capital letter."
+                    </p>
+                </div>
+                <div class="siteUrl d-flex flex-column justify-content-center px-3">
+                    <label for="siteUrl" class="fw-bold pt-4"><i class="fa-solid fa-link"></i> Site URL:</label>
+                    <input type="text" id="siteUrl" name="siteUrl" value="" placeholder="Please Enter Your Site URL"
+                        class="form-control mt-2">
+                    <p id="siteUrlAlert" class="alert alert-danger p-1 mt-2 fs-6 d-none" role="alert">
+                        "The site URL is Invalid, You must write a correct URL, for example: www.example.com"
+                    </p>
+                </div>
+                <p id="siteNameExistAlert" class="alert alert-danger p-1 mt-5 fs-6 d-none" role="alert">
+                    "The site Name is already exist, please type anoter name"
+                </p>
+                <button id="mainBtn" class="btn mainBtn my-4 d-block m-auto fw-bold">Submit</button>
+            </div>
+        </div>
+        <div class="contentDisplay py-5">
+            <table class="table table-dark text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="insertTarget">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
